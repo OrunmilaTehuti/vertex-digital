@@ -22,15 +22,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- External Modular Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Safely Injected Glassmorphism Components Overrides Layer -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+        }
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.75) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+    </style>
 </head>
 <body class="text-gray-300 antialiased overflow-x-hidden">
 
     <!-- NAVIGATION -->
     <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Recreated Branding Logo Asset -->
             <a href="#home" class="flex items-center space-x-3 group">
                 <svg class="h-10 w-auto text-blue-500 transition-transform group-hover:scale-105" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 20 L130 300 L180 180 L130 180 Z" fill="url(#blueGrad)" />
@@ -52,7 +72,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation Array Links -->
+            <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Home</a>
                 <a href="#services" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Services</a>
@@ -61,13 +81,13 @@
                 <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:opacity-90 transition shadow-lg shadow-blue-500/20">Start Project</a>
             </div>
 
-            <!-- Mobile Hamburger Trigger -->
+            <!-- Mobile Hamburger -->
             <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
         
-        <!-- Mobile Navigation Menu Layer Dropdown -->
+        <!-- Mobile Dropdown Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0B0F19]/95 border-b border-white/5 px-6 py-6 space-y-4">
             <a href="#home" class="block text-gray-300 hover:text-blue-400 font-medium">Home</a>
             <a href="#services" class="block text-gray-300 hover:text-blue-400 font-medium">Services</a>
@@ -77,14 +97,12 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION WITH LOOPING VIDEO CANVAS BACKGROUND -->
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
     <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-screen">
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0B0F19]">
-            <!-- Responsive Autoplay Loop Rendering Video Node -->
             <video class="w-full h-full object-cover opacity-25" autoplay loop muted playsinline poster="poster.jpg">
                 <source src="background-video.mp4" type="video/mp4">
             </video>
-            <!-- Blended Multi-stop Gradient Matte Mask Overlay -->
             <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/40 via-[#0B0F19]/80 to-[#0B0F19]"></div>
         </div>
 
@@ -111,7 +129,7 @@
         </div>
     </section>
 
-    <!-- TRUST ARCHITECTURE STATEMENT -->
+    <!-- TRUST STATEMENT -->
     <section class="py-16 border-y border-white/5 bg-white/[0.01] relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Your Digital Growth Starts At The Vertex.</h2>
@@ -215,7 +233,7 @@
         </div>
     </section>
 
-    <!-- ABOUT COMPANY IDENTITY -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 bg-white/[0.01] border-y border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -256,7 +274,7 @@
         </div>
     </section>
 
-    <!-- OPERATIONAL PROCESS TIMELINE -->
+    <!-- PROCESS SECTION -->
     <section id="process" class="py-24 md:py-32 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20">
@@ -301,7 +319,7 @@
         </div>
     </section>
 
-    <!-- CONTACT INTEGRATION GRAPH LAYER -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="py-24 bg-white/[0.01] border-t border-white/5 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -310,7 +328,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-                <!-- Communications Connection Sidebar -->
+                <!-- Sidebar -->
                 <div class="space-y-6 lg:col-span-1">
                     <h3 class="text-xl font-bold text-white font-['Space_Grotesk']">Get In Touch</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Prefer direct email? Reach out to our operations team at any time for support, audits, or consultation scheduling.</p>
@@ -326,7 +344,7 @@
                     </div>
                 </div>
 
-                <!-- Formspree Secure Form Container -->
+                <!-- Form -->
                 <div class="glass-card p-8 rounded-2xl lg:col-span-2">
                     <form action="https://formspree.io/f/mlgqrgbe" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -368,7 +386,7 @@
         </div>
     </section>
 
-    <!-- FOOTER MATTE -->
+    <!-- FOOTER -->
     <footer class="border-t border-white/5 py-12 bg-[#080B12] relative z-10">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex flex-col items-center md:items-start space-y-2">
@@ -381,7 +399,6 @@
                 <p class="text-xs text-gray-500">&copy; 2026 Vertex Digital Partners. Digital solutions for modern businesses.</p>
             </div>
             
-            <!-- Global Support Access Node -->
             <div class="text-center md:text-left">
                 <a href="mailto:support@vertexdigitalpartners.com" class="text-xs text-gray-400 hover:text-blue-400 transition flex items-center justify-center md:justify-start gap-2">
                     <i class="fa-solid fa-envelope text-blue-500 text-xs"></i> support@vertexdigitalpartners.com
@@ -398,7 +415,7 @@
         </div>
     </footer>
 
-    <!-- Execution Controller Scripts -->
+    <!-- Scripts Engine -->
     <script src="main.js"></script>
 </body>
 </html>
