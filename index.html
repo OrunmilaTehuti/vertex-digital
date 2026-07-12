@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertex Digital Partners | Digital Solutions Built For Growth</title>
     
+    <!-- Google tag (gtag.js) Analytics Integration -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CJ2QSRW97"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,12 +14,16 @@
       gtag('config', 'G-6CJ2QSRW97');
     </script>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Safely Injected Glassmorphism Components Overrides Layer -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -43,13 +48,16 @@
 </head>
 <body class="text-gray-300 antialiased overflow-x-hidden">
 
+    <!-- NAVIGATION -->
     <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
+            <!-- Official VDP Logo Asset Integration -->
             <a href="#home" class="flex items-center group">
                 <img src="logo.png" alt="Vertex Digital Partners" class="h-14 w-auto transition-transform group-hover:scale-105">
             </a>
 
+            <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Home</a>
                 <a href="#services" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Services</a>
@@ -58,11 +66,13 @@
                 <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:opacity-90 transition shadow-lg shadow-blue-500/20">Start Project</a>
             </div>
 
+            <!-- Mobile Hamburger -->
             <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
         
+        <!-- Mobile Dropdown Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0B0F19]/95 border-b border-white/5 px-6 py-6 space-y-4">
             <a href="#home" class="block text-gray-300 hover:text-blue-400 font-medium">Home</a>
             <a href="#services" class="block text-gray-300 hover:text-blue-400 font-medium">Services</a>
@@ -72,17 +82,20 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
     <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-screen">
+        <!-- Optimized Video Wrapper Box -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0B0F19]">
-            <video class="w-full h-full object-cover opacity-25" autoplay loop muted playsinline poster="poster.jpg">
+            <!-- Updated Autoplay Properties for strict cross-browser alignment -->
+            <video class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-20" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
                 <source src="background-video.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/40 via-[#0B0F19]/80 to-[#0B0F19]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/20 via-[#0B0F19]/70 to-[#0B0F19] z-10"></div>
         </div>
 
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
-        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-20">
             <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-blue-400 tracking-wider uppercase font-semibold mb-6 backdrop-blur-sm">
                 <span>Vertex Digital Partners</span>
             </div>
@@ -103,6 +116,7 @@
         </div>
     </section>
 
+    <!-- TRUST STATEMENT -->
     <section class="py-16 border-y border-white/5 bg-white/[0.01] relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Your Digital Growth Starts At The Vertex.</h2>
@@ -112,6 +126,7 @@
         </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section id="services" class="py-24 md:py-32 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20">
@@ -120,6 +135,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
                 <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -136,6 +152,7 @@
                     </ul>
                 </div>
 
+                <!-- Service 2 -->
                 <div class="glass-card p-8 rounded-2xl hover:border-purple-500/40 transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
@@ -152,6 +169,7 @@
                     </ul>
                 </div>
 
+                <!-- Service 3 -->
                 <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -167,6 +185,7 @@
                     </ul>
                 </div>
 
+                <!-- Service 4 -->
                 <div class="glass-card p-8 rounded-2xl hover:border-purple-500/40 transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
@@ -182,6 +201,7 @@
                     </ul>
                 </div>
 
+                <!-- Service 5 -->
                 <div class="glass-card p-8 rounded-2xl hover:border-blue-500/40 transition duration-300 flex flex-col justify-between group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -200,6 +220,7 @@
         </div>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 bg-white/[0.01] border-y border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -240,6 +261,7 @@
         </div>
     </section>
 
+    <!-- PROCESS SECTION -->
     <section id="process" class="py-24 md:py-32 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20">
@@ -248,6 +270,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
                 <div class="relative group">
                     <div class="absolute -top-6 left-4 text-5xl font-bold text-white/5 group-hover:text-blue-500/10 transition font-['Space_Grotesk']">01</div>
                     <div class="glass-card p-6 rounded-xl pt-10">
@@ -255,6 +278,7 @@
                         <p class="text-xs text-gray-400 leading-relaxed">Understanding your business operations, clear-cut objectives, and strict technical requirements.</p>
                     </div>
                 </div>
+                <!-- Step 2 -->
                 <div class="relative group">
                     <div class="absolute -top-6 left-4 text-5xl font-bold text-white/5 group-hover:text-purple-500/10 transition font-['Space_Grotesk']">02</div>
                     <div class="glass-card p-6 rounded-xl pt-10">
@@ -262,6 +286,7 @@
                         <p class="text-xs text-gray-400 leading-relaxed">Creating a crystal-clear dynamic architectural roadmap and tactical solution approach.</p>
                     </div>
                 </div>
+                <!-- Step 3 -->
                 <div class="relative group">
                     <div class="absolute -top-6 left-4 text-5xl font-bold text-white/5 group-hover:text-blue-500/10 transition font-['Space_Grotesk']">03</div>
                     <div class="glass-card p-6 rounded-xl pt-10">
@@ -269,6 +294,7 @@
                         <p class="text-xs text-gray-400 leading-relaxed">Designing, building, and comprehensively stress-testing your digital asset solution.</p>
                     </div>
                 </div>
+                <!-- Step 4 -->
                 <div class="relative group">
                     <div class="absolute -top-6 left-4 text-5xl font-bold text-white/5 group-hover:text-purple-500/10 transition font-['Space_Grotesk']">04</div>
                     <div class="glass-card p-6 rounded-xl pt-10">
@@ -280,6 +306,7 @@
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contact" class="py-24 bg-white/[0.01] border-t border-white/5 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -288,6 +315,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Sidebar -->
                 <div class="space-y-6 lg:col-span-1">
                     <h3 class="text-xl font-bold text-white font-['Space_Grotesk']">Get In Touch</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Prefer direct email? Reach out to our operations team at any time for support, audits, or consultation scheduling.</p>
@@ -303,6 +331,7 @@
                     </div>
                 </div>
 
+                <!-- Form -->
                 <div class="glass-card p-8 rounded-2xl lg:col-span-2">
                     <form action="https://formspree.io/f/mlgqrgbe" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -344,6 +373,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="border-t border-white/5 py-12 bg-[#080B12] relative z-10">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex flex-col items-center md:items-start space-y-2">
@@ -372,6 +402,7 @@
         </div>
     </footer>
 
+    <!-- Scripts Engine -->
     <script src="main.js"></script>
 </body>
 </html>
