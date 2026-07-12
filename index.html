@@ -11,7 +11,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-6CJ2QSRW97');
     </script>
 
@@ -23,35 +22,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0B0F19;
-        }
-        h1, h2, h3 {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-    </style>
+    <!-- External Modular Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-300 antialiased overflow-x-hidden">
 
     <!-- NAVIGATION -->
     <nav class="glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- SVG Logo Recreated for Dark Mode -->
+            <!-- Recreated Branding Logo Asset -->
             <a href="#home" class="flex items-center space-x-3 group">
                 <svg class="h-10 w-auto text-blue-500 transition-transform group-hover:scale-105" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 20 L130 300 L180 180 L130 180 Z" fill="url(#blueGrad)" />
@@ -73,7 +52,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
+            <!-- Desktop Navigation Array Links -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Home</a>
                 <a href="#services" class="text-sm font-medium text-gray-300 hover:text-blue-400 transition">Services</a>
@@ -82,13 +61,13 @@
                 <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:opacity-90 transition shadow-lg shadow-blue-500/20">Start Project</a>
             </div>
 
-            <!-- Mobile Hamburger -->
+            <!-- Mobile Hamburger Trigger -->
             <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
         
-        <!-- Mobile Dropdown -->
+        <!-- Mobile Navigation Menu Layer Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0B0F19]/95 border-b border-white/5 px-6 py-6 space-y-4">
             <a href="#home" class="block text-gray-300 hover:text-blue-400 font-medium">Home</a>
             <a href="#services" class="block text-gray-300 hover:text-blue-400 font-medium">Services</a>
@@ -98,14 +77,21 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden flex items-center">
-        <!-- Abstract Glow Backgrounds -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <!-- HERO SECTION WITH LOOPING VIDEO CANVAS BACKGROUND -->
+    <section id="home" class="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-screen">
+        <div class="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0B0F19]">
+            <!-- Responsive Autoplay Loop Rendering Video Node -->
+            <video class="w-full h-full object-cover opacity-25" autoplay loop muted playsinline poster="poster.jpg">
+                <source src="background-video.mp4" type="video/mp4">
+            </video>
+            <!-- Blended Multi-stop Gradient Matte Mask Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/40 via-[#0B0F19]/80 to-[#0B0F19]"></div>
+        </div>
+
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-blue-400 tracking-wider uppercase font-semibold mb-6">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-blue-400 tracking-wider uppercase font-semibold mb-6 backdrop-blur-sm">
                 <span>Vertex Digital Partners</span>
             </div>
             <h1 class="text-4xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.15]">
@@ -125,8 +111,8 @@
         </div>
     </section>
 
-    <!-- TRUST STATEMENT -->
-    <section class="py-16 border-y border-white/5 bg-white/[0.01] relative">
+    <!-- TRUST ARCHITECTURE STATEMENT -->
+    <section class="py-16 border-y border-white/5 bg-white/[0.01] relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Your Digital Growth Starts At The Vertex.</h2>
             <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto">
@@ -136,7 +122,7 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="py-24 md:py-32 relative">
+    <section id="services" class="py-24 md:py-32 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Our Services</h2>
@@ -229,8 +215,8 @@
         </div>
     </section>
 
-    <!-- ABOUT & WHY CHOOSE US -->
-    <section id="about" class="py-24 bg-white/[0.01] border-y border-white/5 relative">
+    <!-- ABOUT COMPANY IDENTITY -->
+    <section id="about" class="py-24 bg-white/[0.01] border-y border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -270,8 +256,8 @@
         </div>
     </section>
 
-    <!-- PROCESS SECTION -->
-    <section id="process" class="py-24 md:py-32">
+    <!-- OPERATIONAL PROCESS TIMELINE -->
+    <section id="process" class="py-24 md:py-32 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Our Process</h2>
@@ -315,65 +301,93 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 bg-white/[0.01] border-t border-white/5 relative">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
+    <!-- CONTACT INTEGRATION GRAPH LAYER -->
+    <section id="contact" class="py-24 bg-white/[0.01] border-t border-white/5 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Let's Build Something Great.</h2>
-                <p class="text-gray-400">Have a project, idea, or digital landscape challenge? Vertex Digital Partners is ready to build the right architecture.</p>
+                <p class="text-gray-400 max-w-xl mx-auto">Have a project, idea, or digital landscape challenge? Vertex Digital Partners is ready to build the right architecture.</p>
             </div>
 
-            <!-- Contact Form Card -->
-            <div class="glass-card p-8 md:p-10 rounded-2xl">
-                <form action="https://formspree.io/f/mlgqrgbe" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Name</label>
-                            <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Communications Connection Sidebar -->
+                <div class="space-y-6 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-white font-['Space_Grotesk']">Get In Touch</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Prefer direct email? Reach out to our operations team at any time for support, audits, or consultation scheduling.</p>
+                    
+                    <div class="glass-card p-6 rounded-xl flex items-center space-x-4 border-l-4 border-l-blue-500">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Email</label>
-                            <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Company</label>
-                            <input type="text" name="company" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Service Interested In</label>
-                            <select name="service" class="w-full bg-[#0F1422] border border-white/10 rounded-xl px-4 py-3.5 text-gray-300 focus:outline-none focus:border-blue-500 transition text-sm appearance-none">
-                                <option value="Website Design & Development">Website Design & Development</option>
-                                <option value="Digital Strategy & Consulting">Digital Strategy & Consulting</option>
-                                <option value="Branding & Visual Identity">Branding & Visual Identity</option>
-                                <option value="Automation & Business Solutions">Automation & Business Solutions</option>
-                                <option value="Digital Marketing Solutions">Digital Marketing Solutions</option>
-                            </select>
+                            <span class="text-[10px] text-gray-500 tracking-widest uppercase block">Official Support</span>
+                            <a href="mailto:support@vertexdigitalpartners.com" class="text-sm text-white hover:text-blue-400 transition font-medium">support@vertexdigitalpartners.com</a>
                         </div>
                     </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Message</label>
-                        <textarea name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:opacity-90 transition shadow-xl shadow-blue-500/20 text-sm tracking-wider uppercase cursor-pointer">
-                        Send Inquiry
-                    </button>
-                </form>
+                </div>
+
+                <!-- Formspree Secure Form Container -->
+                <div class="glass-card p-8 rounded-2xl lg:col-span-2">
+                    <form action="https://formspree.io/f/mlgqrgbe" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Name</label>
+                                <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Company</label>
+                                <input type="text" name="company" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Service Interested In</label>
+                                <select name="service" class="w-full bg-[#0F1422] border border-white/10 rounded-xl px-4 py-3.5 text-gray-300 focus:outline-none focus:border-blue-500 transition text-sm appearance-none">
+                                    <option value="Website Design & Development">Website Design & Development</option>
+                                    <option value="Digital Strategy & Consulting">Digital Strategy & Consulting</option>
+                                    <option value="Branding & Visual Identity">Branding & Visual Identity</option>
+                                    <option value="Automation & Business Solutions">Automation & Business Solutions</option>
+                                    <option value="Digital Marketing Solutions">Digital Marketing Solutions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Message</label>
+                            <textarea name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 transition text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:opacity-90 transition shadow-xl shadow-blue-500/20 text-sm tracking-wider uppercase cursor-pointer">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/5 py-12 bg-[#080B12]">
+    <!-- FOOTER MATTE -->
+    <footer class="border-t border-white/5 py-12 bg-[#080B12] relative z-10">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="flex flex-col">
-                    <span class="text-white font-bold tracking-wider font-['Space_Grotesk']">VERTEX</span>
-                    <span class="text-[10px] text-gray-500 tracking-widest uppercase">Digital Partners</span>
+            <div class="flex flex-col items-center md:items-start space-y-2">
+                <div class="flex items-center space-x-3">
+                    <div class="flex flex-col">
+                        <span class="text-white font-bold tracking-wider font-['Space_Grotesk']">VERTEX</span>
+                        <span class="text-[10px] text-gray-500 tracking-widest uppercase">Digital Partners</span>
+                    </div>
                 </div>
+                <p class="text-xs text-gray-500">&copy; 2026 Vertex Digital Partners. Digital solutions for modern businesses.</p>
             </div>
-            <p class="text-xs text-gray-500 text-center md:text-left">&copy; 2026 Vertex Digital Partners. Digital solutions for modern businesses.</p>
+            
+            <!-- Global Support Access Node -->
+            <div class="text-center md:text-left">
+                <a href="mailto:support@vertexdigitalpartners.com" class="text-xs text-gray-400 hover:text-blue-400 transition flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-envelope text-blue-500 text-xs"></i> support@vertexdigitalpartners.com
+                </a>
+            </div>
+
             <div class="flex items-center space-x-6 text-sm">
                 <a href="#home" class="text-gray-500 hover:text-white transition">Home</a>
                 <a href="#services" class="text-gray-500 hover:text-white transition">Services</a>
@@ -384,30 +398,7 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE SCRIPTS -->
-    <script>
-        // Mobile Navigation Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when clicking link items
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
-
-        // Dynamic Nav Background Change on Scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if(window.scrollY > 50) {
-                nav.classList.add('py-2', 'bg-[#0B0F19]/95');
-            } else {
-                nav.classList.remove('py-2', 'bg-[#0B0F19]/95');
-            }
-        });
-    </script>
+    <!-- Execution Controller Scripts -->
+    <script src="main.js"></script>
 </body>
 </html>
